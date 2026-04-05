@@ -30,8 +30,7 @@ const studyGroupSchema = new mongoose.Schema({
   },
   faculty: {
     type: String,
-    required: [true, 'Faculty is required'],
-    enum: ['Engineering', 'Business', 'Arts', 'Science', 'Law', 'Medicine', 'Education', 'Theology']
+    trim: true
   },
   leader: {
     type: mongoose.Schema.Types.ObjectId,
